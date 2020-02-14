@@ -1,14 +1,25 @@
-<div class="banner" >
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.pexels.com/photos/452742/pexels-photo-452742.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);">
   <div class="container">
-    <h1>Les cocktails</h1>
+    <h1>Les cocktails de Cubi</h1>
+    <p>
+      <span id="banner-typed-text"></span>
+    </p>
   </div>
 </div>
 
 <div class="container">
-  <% @cocktails.each do |cocktail| %>
-  <p><%= link_to cocktail.name, cocktail_path(cocktail) %></p>
-  <p><%= link_to 'Ajouter une dose', new_cocktail_dose_path(cocktail) %></p>
-  <% end %>
-
-<%= link_to "Ajouter un nouveau cocktail", new_cocktail_path, class: "btn btn-ghost" %>
+  <div class="row">
+    <% @cocktails.each do |cocktail| %>
+      <div class='card-trip col-md-12 col-lg-5 m-3'>
+        <img src="https://images.pexels.com/photos/605408/pexels-photo-605408.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" />
+        <div class="card-trip-infos">
+          <div>
+            <h2><%= link_to cocktail.name, cocktail_path(cocktail) %></h2>
+          </div>
+          <h2 class="card-trip-review"><%= link_to 'Ajouter une dose', new_cocktail_dose_path(cocktail) %></h2>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  <%= link_to "Ajouter un nouveau cocktail", new_cocktail_path, class: "btn btn-ghost" %>
 </div>

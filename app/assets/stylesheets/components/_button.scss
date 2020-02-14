@@ -1,0 +1,19 @@
+.btn-ghost {
+  color: white;
+  background: linear-gradient(to right, #DE6262 0%, #FFB88C 51%, #DE6262 100%);
+  padding: 8px 24px;
+  border-radius: 50px;
+  font-weight: normal;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+
+  &:hover {
+    opacity: 1;
+    background-position: right center;
+    color: white;
+  }
+}
+
+// .btn-ghost:hover {
+
+// }
