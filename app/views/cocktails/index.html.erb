@@ -11,7 +11,7 @@
   <div class="row">
     <% @cocktails.each do |cocktail| %>
       <div class='card-trip col-md-12 col-lg-5 m-3'>
-        <img src="https://images.pexels.com/photos/605408/pexels-photo-605408.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" />
+        <img src="https://images.pexels.com/photos/3604314/pexels-photo-3604314.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" />
         <div class="card-trip-infos">
           <div>
             <h2><%= link_to cocktail.name, cocktail_path(cocktail) %></h2>
@@ -23,3 +23,6 @@
   </div>
   <%= link_to "Ajouter un nouveau cocktail", new_cocktail_path, class: "btn btn-ghost mb-5" %>
 </div>
+
+<br>
+
